@@ -15,5 +15,10 @@ You can read more topics about recursion (see Resources tab) if you aren't famil
 An iterative version of this challenge can be found via this link."""
 
 def fib_str(n, f):
-  # recursive code here
-  pass
+  if len(f) == n:
+    return ', '.join(f)
+  else:
+    return fib_str(n, f+[f[-1]+f[-2]])
+
+print(fib_str(5, ["j", "h"]))
+print(fib_str(6, ["n", "k"]))
